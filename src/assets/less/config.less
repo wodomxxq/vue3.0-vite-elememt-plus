@@ -1,0 +1,27 @@
+// 滚动条样式
+.scrollbar(@width: 8px, @color:#CBD3DC, @bgColor: #E6E9EE, @bsColor: #E6E9EE) {
+  // webkit内核
+  &::-webkit-scrollbar {
+    width: @width;
+    height: @width;
+    background-color: @bgColor;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px @bsColor;
+    -webkit-box-shadow: inset 0 0 6px @bsColor;
+    border-radius: 8px;
+    background-color: @bgColor;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: @color;
+  }
+  // Trident内核
+  scrollbar-arrow-color: @color; // 设置滚动条上的箭头颜色
+	scrollbar-base-color: @color; // 设置滚动条的底色
+	scrollbar-track-color: @bgColor;  // 设置滚动条块的背景色
+  scrollbar-shadow-color: @bgColor; // 设置箭头和滚动条右侧和底边的颜色
+  // Gecko
+  scrollbar-width: thin;
+  scrollbar-color: @color @bgColor;
+}

@@ -1,0 +1,68 @@
+@import "./config.less";
+
+// 分块标题栏
+.x-block-title {
+  position: relative;
+  margin: 16px 0;
+  padding-left: 11px;
+  font-size: 18px;
+  color: #282E43;
+  background: #fff;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 18px;
+    background: #567CDB;
+  }
+}
+
+.x-container {
+  height: calc(100% - 90px);
+  margin-top: 60px;
+  overflow: auto;
+  .scrollbar(12px);
+}
+
+.x-menu {
+  height: calc(100% - 72px);
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+.el-form-item__content,
+.el-cascader {
+  width: 400px;
+}
+
+.el-input__inner,
+.el-input {
+  width: 100% !important;
+}
+
+// 爱恨原则
+a:link {
+  color: #f0f;
+}
+a:visited {
+  color: #00f;
+}
+a:hover {
+  color: #0f0;
+}
+a:active {
+  color: #f00;
+}
