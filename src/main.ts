@@ -13,6 +13,9 @@ import pageTitle from './components/pageTitle.vue'
 
 const app = createApp(App)
 
+// app.config.globalProperties.$ELEMENT = 
+// app.config.globalProperties.$httpGet = httpGet
+// app.config.globalProperties.$httpPost = httpPost
 
 window.$version = {
   vue: app.version,
